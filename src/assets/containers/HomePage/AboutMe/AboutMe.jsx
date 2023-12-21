@@ -4,6 +4,7 @@ import Diplome from "../../../images/diplome.png";
 import Experience from "../../../images/experience.png";
 import Nationalite from "../../../images/nationalite.png";
 import Competences from "../../../images/competence.png";
+import PasseTemps from "../../../images/passeTemps.png";
 import { useTranslation } from "react-i18next";
 
 function AboutMe() {
@@ -31,16 +32,16 @@ function AboutMe() {
       description: t("AboutMe.Description.Competences"),
     },
     {
-      title: t("AboutMe.Competences"),
-      imageIcon: Competences,
-      description: t("AboutMe.Description.Competences"),
+      title: t("AboutMe.PasseTemps"),
+      imageIcon: PasseTemps,
+      description: t("AboutMe.Description.PasseTemps"),
     },
   ];
 
   return (
     <>
       <section className="aboutMe" id="about">
-        <h2>{t("AboutMe.AboutMe")}</h2>
+        <h2>{t("AboutMe.APropos")}</h2>
         <div className="aboutMe__container">
           {aboutMeData.map((aboutMeData, index) => (
             <AboutCard

@@ -5,6 +5,29 @@ import { useTranslation } from "react-i18next";
 function HamburgerMenu() {
   const { t } = useTranslation();
 
+  const hamburgerMenu = [
+    {
+      name: `${t("HamburgerMenu.Accueil")}`,
+      link: "/",
+    },
+    {
+      name: `${t("HamburgerMenu.APropos")}`,
+      link: "#about",
+    },
+    {
+      name: `${t("HamburgerMenu.Competences")}`,
+      link: "#skills",
+    },
+    {
+      name: `${t("HamburgerMenu.Projets")}`,
+      link: "#projects",
+    },
+    {
+      name: `${t("HamburgerMenu.Contact")}`,
+      link: "#contact",
+    },
+  ];
+
   const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     if (menuOpen) {
@@ -29,9 +52,19 @@ function HamburgerMenu() {
       ></div>
       <div className={`navigation ${menuOpen ? "active" : "inactive"}`}>
         <ul>
-          <li>{t("HamburgerMenu.Accueil")}</li>
-          <li>{t("HamburgerMenu.AboutMe")}</li>
-          <li>{t("HamburgerMenu.Project")}</li>
+          {hamburgerMenu.map((nav, index) => {
+            return (
+              <li key={index}>
+                <a
+                  href={nav.link}
+                  onClick={toggleMenu}
+                  className="hamburger-link"
+                >
+                  {nav.name}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
       <div

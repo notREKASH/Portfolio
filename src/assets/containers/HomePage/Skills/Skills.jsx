@@ -64,7 +64,7 @@ function Skills() {
   return (
     <>
       <section className="skills" id="skills">
-        <h2>Skills</h2>
+        <h2>{t("Skills.Title")}</h2>
         <SkillsContainer skills={skillsData} />
         <div className="skills__container">
           <div className="skills__container--content" onClick={downloadFile}>

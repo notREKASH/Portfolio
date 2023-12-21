@@ -77,7 +77,7 @@ function Projects() {
   return (
     <>
       <section className="projects" id="projects">
-        <h2>{t("Projects.Projects")} </h2>
+        <h2>{t("Projects.Title")} </h2>
         <div className="projects__container">
           <Slider {...settings}>
             {projectsData.map((project, index) => (
