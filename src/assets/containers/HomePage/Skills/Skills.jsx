@@ -38,15 +38,27 @@ function Skills() {
   const { t } = useTranslation();
 
   const downloadFile = () => {
-    fetch("CV_Benmehal_Joris.pdf").then((response) => {
-      response.blob().then((blob) => {
-        let url = window.URL.createObjectURL(blob);
-        let a = document.createElement("a");
-        a.href = url;
-        a.download = "CV_Benmehal_Joris.pdf";
-        a.click();
+    if (t("DownloadCV.Langue") === "Français") {
+      fetch("CV_FR_Benmehal_Joris.pdf").then((response) => {
+        response.blob().then((blob) => {
+          let url = window.URL.createObjectURL(blob);
+          let a = document.createElement("a");
+          a.href = url;
+          a.download = "CV_FR_Benmehal_Joris.pdf";
+          a.click();
+        });
       });
-    });
+    } else {
+      fetch("CV_EN_Benmehal_Joris.pdf").then((response) => {
+        response.blob().then((blob) => {
+          let url = window.URL.createObjectURL(blob);
+          let a = document.createElement("a");
+          a.href = url;
+          a.download = "CV_EN_Benmehal_Joris.pdf";
+          a.click();
+        });
+      });
+    }
   };
 
   return (
@@ -74,11 +86,6 @@ function Skills() {
         "
               />
               <text id="text" fill="#82dff6" textAnchor="middle">
-                {/* <textPath id="textPath" href="#circlePath" startOffset="50%">
-                  CV&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;CV&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;CV&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;CV&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;CV
-                  &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;CV&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;CV&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;CV&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
-                  CV&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;CV
-                </textPath> */}
                 <textPath id="textPath" href="#circlePath" startOffset="50%">
                   Resume&nbsp;&nbsp;•&nbsp;&nbsp;Resume&nbsp;&nbsp;•&nbsp;&nbsp;Resume&nbsp;&nbsp;•&nbsp;&nbsp;Resume&nbsp;&nbsp;•&nbsp;&nbsp;Resume
                   &nbsp;&nbsp;•&nbsp;&nbsp;Resume&nbsp;&nbsp;•&nbsp;&nbsp;Resume&nbsp;&nbsp;•&nbsp;&nbsp;Resume&nbsp;&nbsp;•
