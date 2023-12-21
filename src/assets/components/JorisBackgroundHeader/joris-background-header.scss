@@ -1,0 +1,9 @@
+@import "../../styles/variables.scss";
+
+.jorisImage {
+  border-radius: 100%;
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  transition: box-shadow 0.2s ease;
+}

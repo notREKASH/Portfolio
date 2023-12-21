@@ -1,0 +1,134 @@
+@import "../../../styles/variables.scss";
+
+.form {
+  max-width: 1240px;
+  margin: 0 auto;
+  h2 {
+    @include h2;
+    color: white;
+  }
+
+  &__content {
+    margin: 0 auto;
+    width: 80%;
+
+    @media (min-width: $sm) {
+      max-width: 450px;
+    }
+
+    @media (min-width: $lg) {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__container {
+      height: fit-content;
+      background: transparent
+        linear-gradient(99deg, #f784f5bf 0%, #82dff6bd 75%, #ffffffbd 100%) 0%
+        0% no-repeat padding-box;
+      box-shadow: 10px 10px 20px #82dff638;
+      margin: 0 auto;
+      border-radius: 12px;
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      position: relative;
+
+      @media (min-width: $sm) {
+        max-width: 450px;
+      }
+
+      @media (min-width: $md) {
+        width: 400px;
+      }
+
+      input,
+      textarea {
+        @include inconsolata;
+        padding: 0.5em 1em;
+
+        &:focus {
+          outline: 1px solid #f784f5;
+          border: none;
+        }
+      }
+
+      ::placeholder {
+        @include inconsolata;
+        font-size: 14px;
+        color: black;
+      }
+
+      &__input {
+        width: 90%;
+        input,
+        textarea {
+          background: #00000030 0% 0% no-repeat padding-box;
+          outline: 1px solid #ffffff;
+          border: none;
+          border-radius: 22px;
+          width: 100%;
+          font-size: 14px;
+          font-family: "Montserrat", sans-serif;
+        }
+
+        textarea {
+          height: 130px;
+        }
+      }
+
+      &__button {
+        color: black;
+        width: 25%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 0 auto;
+        border-radius: 0.5em;
+        border: none;
+        font-size: 1em;
+        font-family: "Montserrat", sans-serif;
+        background-color: white;
+        cursor: pointer;
+        font-weight: 600;
+      }
+    }
+
+    &__information {
+      max-width: 80vw;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin-top: 2.5em;
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 0.5em;
+          background-color: #392647;
+          padding: 1.2em;
+          border-radius: 40%;
+        }
+
+        a,
+        p {
+          color: white;
+          text-decoration: none;
+          font-size: 16px;
+          @include inconsolata;
+        }
+      }
+    }
+  }
+}

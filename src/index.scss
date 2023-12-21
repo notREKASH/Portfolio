@@ -1,0 +1,16 @@
+@import "./assets/styles/reset.scss";
+@import "./assets/styles/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Montserrat&display=swap");
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: $backgroundColor;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}

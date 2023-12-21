@@ -1,0 +1,50 @@
+@import "../../styles/variables.scss";
+
+.aboutCard {
+  position: relative;
+  width: 150px;
+  height: 180px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(247, 143, 245, 0.3);
+  background-color: $backgroundColor;
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 0.3em;
+
+  @media (min-width: $md) {
+    width: 180px;
+    height: 210px;
+  }
+
+  h4 {
+    color: $tertiaryColor;
+    font-size: 16px;
+    @include inconsolata;
+
+    &::before {
+      content: "<";
+      margin-right: 5px;
+      color: $primaryColor;
+    }
+
+    &::after {
+      content: "/>";
+      margin-left: 5px;
+      color: $primaryColor;
+    }
+  }
+
+  img {
+    height: 60px;
+  }
+
+  p {
+    font-size: 12px;
+    color: white;
+  }
+}

@@ -1,0 +1,120 @@
+@import "../../../styles/variables.scss";
+
+.skills {
+  color: white;
+  height: fit-content;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+
+  h2 {
+    margin-top: 3em;
+    @include h2;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+
+    @media (min-width: $md) {
+      margin-top: 2em;
+      flex-direction: row;
+      justify-content: center;
+      gap: 4em;
+    }
+
+    @media (min-width: $lg) {
+      gap: 5em;
+      padding: 0 2em;
+    }
+
+    @media (min-width: $xl) {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5em;
+    }
+
+    &--content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 2.5em auto;
+      cursor: pointer;
+
+      @media (min-width: $md) {
+        order: 2;
+      }
+
+      @media (min-width: $md) {
+        margin: 3em 0;
+      }
+
+      @media (min-width: $xl) {
+        order: 1;
+        margin: 0 auto;
+      }
+
+      &--img {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+      }
+
+      &--svg {
+        position: absolute;
+        width: 240px;
+        height: 240px;
+        border-radius: 100%;
+        transform-origin: center;
+        overflow: hidden;
+        animation: circleAnimation 16s infinite linear;
+
+        @keyframes circleAnimation {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+
+    &--citation {
+      font-size: 0.8em;
+      text-align: center;
+      max-width: 75%;
+      margin: 0 auto;
+      font-style: italic;
+
+      @media (min-width: $md) {
+        order: 1;
+        max-width: 60%;
+        margin: 2rem 0;
+        font-size: 1em;
+      }
+
+      @media (min-width: $lg) {
+        margin-top: 3em;
+        max-width: 50%;
+      }
+
+      @media (min-width: $xl) {
+        max-width: 900px;
+      }
+    }
+  }
+}
+
+#text {
+  @include inconsolata;
+  font-size: 5.6px;
+  font-weight: bold;
+  text-align: center;
+  color: $secondaryColor;
+  z-index: 1;
+}

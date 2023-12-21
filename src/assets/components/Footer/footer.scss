@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+
+.footer {
+  margin-top: 3em;
+  display: flex;
+  background-color: #392647;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+
+  h3 {
+    color: white;
+    font-size: 1em;
+    @include inconsolata;
+  }
+
+  &__container {
+    display: flex;
+    gap: 1em;
+  }
+}

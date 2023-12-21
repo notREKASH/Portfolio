@@ -1,0 +1,115 @@
+@import "../../styles/variables.scss";
+
+.hamburgerMenuContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(94, 94, 94);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  &.active {
+    opacity: 0.5;
+    z-index: 2;
+  }
+}
+
+.hamburgerMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  z-index: 3;
+
+  &--span {
+    height: 2px;
+    width: 30px;
+    background-color: $tertiaryColor;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  &.active {
+    .hamburgerMenu--span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .hamburgerMenu--span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburgerMenu--span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+  }
+}
+
+.navigation {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  transform: translateX(100%);
+  height: 50vh;
+  top: 0;
+  border-bottom-left-radius: 8px;
+  overflow: hidden;
+  z-index: 3;
+  transition: transform 0.5s ease-in-out;
+
+  &.active {
+    transform: translateX(0%);
+  }
+
+  &.inactive {
+    transform: translateX(100%);
+  }
+
+  @media (min-width: $sm) {
+    width: 35%;
+  }
+
+  @media (min-width: $lg) {
+    width: 30%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include linearGradientRight;
+    z-index: -1;
+    box-sizing: border-box;
+    background-clip: padding-box;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    li {
+      width: 100%;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+
+      &::before {
+        content: " >_";
+        margin-right: 0.5em;
+        color: white;
+        font-weight: 900;
+      }
+    }
+  }
+}
+
+body.no-scroll {
+  overflow: hidden;
+}

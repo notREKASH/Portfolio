@@ -1,0 +1,61 @@
+{
+  "HamburgerMenu": {
+    "Accueil": "Accueil",
+    "AboutMe": "À propos de moi",
+    "Project": "Projets"
+  },
+  "CardProject": {
+    "Previsualisation": "Preview",
+    "VoirCode": "Voir code",
+    "SurDemande": "Sur demande"
+  },
+  "DownloadCV": {
+    "CV": "CV",
+    "Langue": "Français"
+  },
+  "Footer": {
+    "RetrouvezMoi": "Retrouvez-moi également sur"
+  },
+  "Header": {
+    "APropos": "À propos",
+    "Competences": "Compétences",
+    "Projets": "Projets",
+    "Contact": "Contact"
+  },
+  "AboutMe": {
+    "AboutMe": "À propos de moi",
+    "Nationalite": "Nationalité",
+    "Experience": "Expérience",
+    "Diplome": "Diplôme",
+    "Competences": "Compétences",
+    "Description": {
+      "Nationalite": "Je viens de France, plus particulièrement de Pontarlier.",
+      "Experience": "1 année d'expérience en tant que développeur front-end autodidacte.",
+      "Diplome": "Bac+2 Intégrateur Web et Bac Télécom et Réseaux",
+      "Competences": "Développeur, passionné de code et d'UX/UI, designer"
+    }
+  },
+  "BackgroundHeader": {
+    "BonjourJeSuis": "Bonjour, je suis",
+    "Developpeur": "Développeur Front-end"
+  },
+  "Form": {
+    "Nom": "Nom",
+    "Email": "Email",
+    "Message": "Votre message ...",
+    "Envoyer": "Envoyer"
+  },
+  "Toast": {
+    "Succes": "Votre message a bien été envoyé !",
+    "Erreur": "Une erreur est survenue, veuillez réessayer plus tard."
+  },
+  "Projects": {
+    "Projects": "Projets",
+    "ChezValerie": "Développé en HTML, SASS, JS Vanilla et PHP. Design pensé pour offrir une expérience UI/UX optimale. La performance a été une priorité, ainsi que l'accessibilité. Le formulaire, codé en PHP, protège contre les attaques XSS, CSRF ainsi que d'autres mesures de sécurité. Intégration de Google Captcha & Maps.",
+    "BJTreklife": "Développé en NextJS, Redux, SASS pour le front-end et NodeJS, Express, MongoDB pour le back-end. Design et conception UI/UX réalisé par mes soins. Le site est responsive et a été optimisé pour le SEO. Le back-end est sécurisé avec des tokens JWT. Le site est hébergé sur Vercel et la base de données sur MongoDB Atlas.",
+    "ArgentBank": "Développé en React avec Vite, intégrant Redux, SASS et Axios pour le front-end. Basé sur un design fourni, j'ai réalisé l'intégration et la mise en place de l'authentification avec JWT. Egalement, j'ai mis en place un système de gestion d'état avec Redux et participé à la définition des routes Transactions de l'API."
+  },
+  "Skills": {
+    "Text": "Guidé par une détermination sans faille, une patience inébranlable et une passion ardente, je m'efforce toujours d'atteindre l'excellence dans chacun de mes projets. Car la simplicité est l'âme de l'efficacité."
+  }
+}

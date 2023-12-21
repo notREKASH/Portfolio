@@ -1,0 +1,62 @@
+{
+  "HamburgerMenu": {
+    "Accueil": "Home",
+    "AboutMe": "About Me",
+    "Project": "Projects"
+  },
+  "CardProject": {
+    "Previsualisation": "Preview",
+    "VoirCode": "View Code",
+    "SurDemande": "On demand"
+  },
+  "DownloadCV": {
+    "CV": "Resume",
+    "Langue": "English"
+  },
+  "Footer": {
+    "RetrouvezMoi": "Find me also on"
+  },
+  "Header": {
+    "APropos": "About",
+    "Competences": "Skills",
+    "Projets": "Projects",
+    "Contact": "Contact"
+  },
+  "AboutMe": {
+    "AboutMe": "About Me",
+    "Nationalite": "Nationality",
+    "Experience": "Experience",
+    "Diplome": "Degree",
+    "Competences": "Skills",
+    "Description": {
+      "Nationalite": "I come from France, more specifically from Pontarlier.",
+      "Experience": "1 year of experience as a self-taught front-end developer.",
+      "Diplome": "Associate's degree in Web Integration and a Bachelor's in Telecom and Networks",
+      "Competences": "Developer, coding and UX/UI enthusiast, designer"
+    }
+  },
+  "BackgroundHeader": {
+    "BonjourJeSuis": "Hello, I am",
+    "Developpeur": "Front-end Developer"
+  },
+  "Form": {
+    "Contact": "Contact",
+    "Nom": "Name",
+    "Email": "Email",
+    "Message": "Type message ...",
+    "Envoyer": "Send"
+  },
+  "Toast": {
+    "Message": "Your message has been sent successfully",
+    "Erreur": "An error has occurred, please try again later"
+  },
+  "Projects": {
+    "Projects": "Projects",
+    "ChezValerie": "Developed in HTML, SASS, Vanilla JS, and PHP. Designed to provide an optimal UI/UX experience. Performance was a priority, as well as accessibility. The PHP-coded form protects against XSS and CSRF attacks, among other security measures. Integration of Google Captcha & Maps.",
+    "BJTreklife": "Developed in NextJS, Redux, SASS for the front-end and NodeJS, Express, MongoDB for the back-end. UI/UX design and conception done by myself. The site is responsive and has been optimized for SEO. The back-end is secured with JWT tokens. The site is hosted on Vercel and the database on MongoDB Atlas.",
+    "ArgentBank": "Developed in React with Vite, integrating Redux, SASS and Axios for the front-end. Based on a provided design, I did the integration and set up the authentication with JWT. Also, I implemented a state management system with Redux and contributed to the definition of the Transactions routes of the API."
+  },
+  "Skills": {
+    "Text": "Guided by unwavering determination, steadfast patience, and a burning passion, I always strive to achieve excellence in each of my projects. Because simplicity is the soul of efficiency."
+  }
+}
