@@ -7,6 +7,10 @@ import Phone from "../../../images/phone.png";
 import Email from "../../../images/email.png";
 import { useTranslation } from "react-i18next";
 
+const emailjsService = import.meta.env.VITE_EMAILJS_SERVICE;
+const emailjsTemplate = import.meta.env.VITE_EMAILJS_TEMPLATE;
+const emailjsKey = import.meta.env.VITE_EMAILJS_KEY;
+
 function Form() {
   const { t } = useTranslation();
   const [toast, setToast] = useState({ message: "", type: "" });
@@ -16,10 +20,10 @@ function Form() {
     e.preventDefault();
     try {
       await emailjs.sendForm(
-        "service_q5p3ka2",
-        "template_6rozyzs",
+        emailjsService,
+        emailjsTemplate,
         form.current,
-        "A5PpHe_8O2LMHLV6p"
+        emailjsKey
       );
       setToast({ message: t("Toast.Succes"), type: "success" });
       setTimeout(() => {
@@ -82,15 +86,15 @@ function Form() {
         </form>
         <div className="form__content__information">
           <div>
-            <img src={User} alt="" />
+            <img src={User} alt="icon user person" />
             <p>Benmehal Joris</p>
           </div>
           <div>
-            <img src={Phone} alt="" />
+            <img src={Phone} alt="icon phone" />
             <a href="">+33 7 67 82 71 51</a>
           </div>
           <div>
-            <img src={Email} alt="" />
+            <img src={Email} alt="icon mail" />
             <a href="">benmehal.joris@gmail.com</a>
           </div>
         </div>

@@ -47,7 +47,7 @@
     "Envoyer": "Send"
   },
   "Toast": {
-    "Message": "Your message has been sent successfully",
+    "Succes": "Your message has been sent successfully",
     "Erreur": "An error has occurred, please try again later"
   },
   "Projects": {
