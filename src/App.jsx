@@ -1,7 +1,6 @@
-import "./app.scss";
 import HomePage from "./assets/containers/HomePage/HomePage";
 import i18n from "i18next";
-import { useTranslation, initReactI18next } from "react-i18next";
+import { initReactI18next } from "react-i18next";
 import translationEN from "./i18n/en.json";
 import translationFR from "./i18n/fr.json";
 
