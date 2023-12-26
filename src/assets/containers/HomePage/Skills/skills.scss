@@ -96,6 +96,8 @@
         max-width: 60%;
         margin: 2rem 0;
         font-size: 1em;
+        display: flex;
+        align-items: center;
       }
 
       @media (min-width: $lg) {
