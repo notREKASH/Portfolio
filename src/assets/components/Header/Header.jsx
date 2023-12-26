@@ -41,7 +41,9 @@ function Header() {
       <header className="header">
         <nav className="header__nav">
           <ul className="header__nav__ul">
-            <h1>BJ</h1>
+            <a href="/">
+              <h1>BJ</h1>
+            </a>
 
             <HamburgerMenu />
           </ul>
@@ -53,7 +55,9 @@ function Header() {
       <header className="header">
         <nav className="header__nav">
           <ul className="header__nav__ul">
-            <h1>BJ</h1>
+            <a href="/">
+              <h1>BJ</h1>
+            </a>
             <div className="header__nav__ul--links">
               {navigationLinks.map((link, index) => (
                 <div key={index} className="links">
@@ -62,8 +66,7 @@ function Header() {
                       <svg
                         height="40"
                         width="150"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
+                        xmlns="http://www.w3.org/2000/svg">
                         <rect id="shape" height="40" width="150" />
                       </svg>
                       <div className="links__svg-wrapper--text">
