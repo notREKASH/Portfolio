@@ -35,7 +35,7 @@ function MatrixRain() {
 
     const interval = setInterval(draw, 33);
 
-    return () => clearInterval(interval); // Cleanup function to clear the interval when the component is unmounted
+    return () => clearInterval(interval);
   }, []);
 
   return <canvas className="matrixRain" ref={canvasRef} />;
