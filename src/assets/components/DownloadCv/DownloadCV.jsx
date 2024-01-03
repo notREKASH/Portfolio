@@ -32,7 +32,7 @@ function DownloadCV() {
   return (
     <>
       <button className="downloadCv" onClick={downloadFile}>
-        <img src={DownloadIco} alt="" />
+        <img src={DownloadIco} alt="Télécharger" />
         {t("DownloadCV.CV")}
       </button>
     </>

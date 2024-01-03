@@ -48,6 +48,8 @@
 
       input,
       textarea {
+        box-sizing: border-box;
+        position: relative;
         @include inconsolata;
         padding: 0.5em 1em;
 
@@ -64,7 +66,8 @@
       }
 
       &__input {
-        width: 90%;
+        width: 100%;
+
         input,
         textarea {
           background: #00000030 0% 0% no-repeat padding-box;
@@ -77,6 +80,7 @@
         }
 
         textarea {
+          resize: vertical;
           height: 130px;
         }
       }
