@@ -1,8 +1,16 @@
 import "./skills-container.scss";
 import SkillsCard from "../SkillsCard/SkillsCard";
-import PropTypes from "prop-types";
+import React from "react";
 
-function SkillsContainer({ skills }) {
+
+interface SkillsContainerProps {
+  skills: {
+    imageIcon: string;
+    alt: string;
+  }[];
+}
+
+function SkillsContainer({ skills }: SkillsContainerProps) {
   return (
     <div className="container">
       {skills.map((skill, index) => (
@@ -11,9 +19,5 @@ function SkillsContainer({ skills }) {
     </div>
   );
 }
-
-SkillsContainer.propTypes = {
-  skills: PropTypes.array.isRequired,
-};
 
 export default SkillsContainer;

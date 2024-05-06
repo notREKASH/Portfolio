@@ -1,7 +1,13 @@
+import React from "react";
 import "./filter-button.scss";
-import PropTypes from "prop-types";
 
-function FilterButton({ name, bgColor, fontColor }) {
+interface FilterButtonProps {
+  name: string;
+  bgColor: string;
+  fontColor: string;
+}
+
+function FilterButton({ name, bgColor, fontColor }: FilterButtonProps) {
   return (
     <>
       <button
@@ -13,11 +19,5 @@ function FilterButton({ name, bgColor, fontColor }) {
     </>
   );
 }
-
-FilterButton.propTypes = {
-  name: PropTypes.string.isRequired,
-  bgColor: PropTypes.string.isRequired,
-  fontColor: PropTypes.string.isRequired,
-};
 
 export default FilterButton;

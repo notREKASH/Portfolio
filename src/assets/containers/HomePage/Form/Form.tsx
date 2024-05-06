@@ -6,6 +6,7 @@ import User from "../../../images/user.png";
 import Phone from "../../../images/phone.png";
 import Email from "../../../images/email.png";
 import { useTranslation } from "react-i18next";
+import React from "react";
 
 const emailjsService = import.meta.env.VITE_EMAILJS_SERVICE;
 const emailjsTemplate = import.meta.env.VITE_EMAILJS_TEMPLATE;
@@ -13,12 +14,19 @@ const emailjsKey = import.meta.env.VITE_EMAILJS_KEY;
 
 function Form() {
   const { t } = useTranslation();
-  const [toast, setToast] = useState({ message: "", type: "" });
+  const [toast, setToast] = useState<{message: string; type: string}>({ message: "", type: "" });
 
-  const form = useRef(null);
-  const sendEmail = async (e) => {
+  const form = useRef<HTMLFormElement>(null);
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
+
+      if (!emailjsService || !emailjsTemplate || !emailjsKey) {
+        throw new Error("La configuration de l'envoi de mail est manquante");
+      } else if (!form.current) {
+        throw new Error("Le formulaire n'est pas correctement configuré");
+      }
+
       await emailjs.sendForm(
         emailjsService,
         emailjsTemplate,
@@ -72,8 +80,8 @@ function Form() {
             <textarea
               name="message"
               id="message"
-              cols="30"
-              rows="10"
+              cols={30}
+              rows={10}
               placeholder={t("Form.Message")}
               required
             ></textarea>
@@ -91,11 +99,11 @@ function Form() {
           </div>
           <div>
             <img src={Phone} alt="icon phone" />
-            <a href="">+33 7 67 82 71 51</a>
+            <a href="tel:+33767827151">+33 7 67 82 71 51</a>
           </div>
           <div>
             <img src={Email} alt="icon mail" />
-            <a href="">benmehal.joris@gmail.com</a>
+            <a href="mailto:benmehal.joris@gmail.com">benmehal.joris@gmail.com</a>
           </div>
         </div>
       </div>

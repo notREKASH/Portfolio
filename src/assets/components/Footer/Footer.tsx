@@ -3,6 +3,7 @@ import "./footer.scss";
 import Github from "../../images/github.png";
 import Linkedin from "../../images/linkedin.png";
 import { useTranslation } from "react-i18next";
+import React from "react";
 
 const footerLinks = [
   { name: "Github", link: "https://github.com/notREKASH", icon: Github },
@@ -23,9 +24,9 @@ function Footer() {
         {footerLinks.map((link, index) => (
           <FooterButton
             key={index}
-            name={link.name}
-            link={link.link}
             icon={link.icon}
+            link={link.link}
+            alt={link.name}
           />
         ))}
       </div>

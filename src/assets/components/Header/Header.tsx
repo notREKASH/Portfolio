@@ -5,8 +5,9 @@ import { useEffect } from "react";
 import Github from "../../images/github.png";
 import Linkedin from "../../images/linkedin.png";
 import { useTranslation } from "react-i18next";
+import React from "react";
 
-const icons = [
+const icons: {name: string; link: string; icon: string}[] = [
   { name: "Github", link: "https://github.com/notREKASH", icon: Github },
   {
     name: "Linkedin",
@@ -16,10 +17,10 @@ const icons = [
 ];
 
 function Header() {
-  const [windowsWidth, setWindowsWidth] = useState(window.innerWidth);
+  const [windowsWidth, setWindowsWidth] = useState<number>(window.innerWidth);
   const { t } = useTranslation();
 
-  const navigationLinks = [
+  const navigationLinks: {name: string; link: string}[] = [
     { name: t("Header.APropos"), link: "#about" },
     { name: t("Header.Competences"), link: "#skills" },
     { name: t("Header.Projets"), link: "#projects" },
@@ -44,7 +45,6 @@ function Header() {
             <a href="/">
               <h1>BJ</h1>
             </a>
-
             <HamburgerMenu />
           </ul>
         </nav>

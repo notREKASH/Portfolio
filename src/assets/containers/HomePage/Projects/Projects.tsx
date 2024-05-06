@@ -7,11 +7,21 @@ import ArticleSheet from "../../../images/chezvalerie-article-sheet.png";
 import Portfolio from "../../../images/portfolio.png";
 import Slider from "react-slick";
 import { useTranslation } from "react-i18next";
+import React from "react";
+
+interface ProjectProps {
+  title: string;
+  description: string;
+  image: string;
+  website?: string;
+  github?: string;
+  filters: { name: string; bgColor: string; fontColor: string }[];
+}
 
 function Projects() {
   const { t } = useTranslation();
 
-  const projectsData = [
+  const projectsData : ProjectProps[] = [
     {
       title: "Chez Valérie",
       description: t("Projects.ChezValerie"),
@@ -74,7 +84,16 @@ function Projects() {
     },
   ];
 
-  const settings = {
+  interface settingsProps {
+    dots: boolean;
+    infinite: boolean;
+    speed: number;
+    slidesToShow: number;
+    slidesToScroll: number;
+    responsive: { breakpoint: number; settings: { slidesToShow: number; slidesToScroll: number; initialSlide: number } }[];
+  }
+
+  const settings : settingsProps = {
     dots: true,
     infinite: true,
     speed: 500,

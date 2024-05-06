@@ -1,7 +1,13 @@
+import React from "react";
 import "./skills-card.scss";
 import PropTypes from "prop-types";
 
-function SkillsCard({ imageIcon, alt }) {
+interface SkillsCardProps {
+  imageIcon: string;
+  alt: string;
+}
+
+function SkillsCard({ imageIcon, alt }: SkillsCardProps) {
   return (
     <>
       <div className="skill">

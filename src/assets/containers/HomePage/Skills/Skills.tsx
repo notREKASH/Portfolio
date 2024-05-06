@@ -1,7 +1,7 @@
 import "./skills.scss";
 import Javascript from "../../../images/javascript.png";
 import NextJS from "../../../images/nextjs.webp";
-import React from "../../../images/reactjs.png";
+import ReactIco from "../../../images/reactjs.png";
 import Redux from "../../../images/redux.png";
 import Node from "../../../images/nodejs.png";
 import Express from "../../../images/express.png";
@@ -16,11 +16,12 @@ import Photoshop from "../../../images/photoshop.png";
 import SkillsContainer from "../../../components/SkillsContainer/SkillsContainer";
 import Logo from "../../../images/joris-bg.png";
 import { useTranslation } from "react-i18next";
+import React from "react";
 
-const skillsData = [
+const skillsData : {imageIcon: string; alt: string}[] = [
   { imageIcon: Javascript, alt: "Javascript" },
   { imageIcon: NextJS, alt: "NextJS" },
-  { imageIcon: React, alt: "React" },
+  { imageIcon: ReactIco, alt: "React" },
   { imageIcon: Redux, alt: "Redux" },
   { imageIcon: Node, alt: "Node" },
   { imageIcon: Express, alt: "Express" },

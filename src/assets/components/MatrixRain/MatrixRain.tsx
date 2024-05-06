@@ -1,29 +1,40 @@
 import { useEffect, useRef } from "react";
 import "./MatrixRain.scss";
+import React from "react";
 
 function MatrixRain() {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
-    const width = (canvas.width = window.innerWidth);
-    const height = (canvas.height = document.documentElement.scrollHeight);
-    const letters =
+    const canvas : HTMLCanvasElement | null = canvasRef.current;
+
+    if (!canvas) {
+      return;
+    }
+
+    const ctx: CanvasRenderingContext2D | null = canvas.getContext("2d");
+    const width: number = (canvas.width = window.innerWidth);
+    const height: number = (canvas.height = document.documentElement.scrollHeight);
+    const letters: string =
       "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ";
-    const fontSize = 10;
-    const columns = width / fontSize;
-    const drops = [];
+    const fontSize: number = 10;
+    const columns: number = width / fontSize;
+    const drops: number[] = [];
     for (let i = 0; i < columns; i++) {
       drops[i] = 1;
     }
 
     function draw() {
+
+      if (!ctx) {
+        return;
+      }
+
       ctx.fillStyle = "#0f08230c";
       ctx.fillRect(0, 0, width, height);
 
       for (let i = 0; i < drops.length; i++) {
-        const text = letters[Math.floor(Math.random() * letters.length)];
+        const text: string = letters[Math.floor(Math.random() * letters.length)];
         ctx.fillStyle = "#82dff6";
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
         drops[i]++;
@@ -33,7 +44,7 @@ function MatrixRain() {
       }
     }
 
-    const interval = setInterval(draw, 33);
+    const interval: ReturnType<typeof setInterval> = setInterval(draw, 33);
 
     return () => clearInterval(interval);
   }, []);

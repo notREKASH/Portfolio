@@ -2,8 +2,17 @@ import "./card-projet.scss";
 import GithubImage from "../../../assets/images/github.png";
 import LiveImage from "../../../assets/images/live.png";
 import FilterButton from "./FilterButton/FilterButton";
-import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
+import React from "react";
+
+interface CardProjectProps {
+  title: string;
+  description: string;
+  image: string;
+  website?: string;
+  github?: string;
+  filters: { name: string; bgColor: string; fontColor: string }[];
+}
 
 function CardProject({
   title,
@@ -12,7 +21,7 @@ function CardProject({
   website,
   github,
   filters = [],
-}) {
+}: CardProjectProps) {
   const { t } = useTranslation();
   return (
     <>
@@ -55,14 +64,5 @@ function CardProject({
     </>
   );
 }
-
-CardProject.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  website: PropTypes.string,
-  github: PropTypes.string,
-  filters: PropTypes.array.isRequired,
-};
 
 export default CardProject;

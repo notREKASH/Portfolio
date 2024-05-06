@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 import icoFra from "../../../images/ico_fra.png";
 import icoEng from "../../../images/ico_eng.webp";
+import React from "react";
 
 function BackgroundHeader() {
   const { t } = useTranslation();

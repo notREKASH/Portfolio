@@ -1,3 +1,4 @@
+import React from "react";
 import "./hamburger-menu.scss";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
@@ -5,7 +6,7 @@ import { useTranslation } from "react-i18next";
 function HamburgerMenu() {
   const { t } = useTranslation();
 
-  const hamburgerMenu = [
+  const hamburgerMenu: { name: string; link: string }[] = [
     {
       name: `${t("HamburgerMenu.Accueil")}`,
       link: "/",
@@ -28,7 +29,8 @@ function HamburgerMenu() {
     },
   ];
 
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false)
+
   useEffect(() => {
     if (menuOpen) {
       document.body.classList.add("no-scroll");
