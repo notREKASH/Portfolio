@@ -58,7 +58,12 @@
     "Title": "Projects",
     "ChezValerie": "Developed in HTML, SASS, Vanilla JS, and PHP. Designed to provide an optimal UI/UX experience. Performance was a priority, as well as accessibility. The PHP-coded form protects against XSS and CSRF attacks, among other security measures. Integration of Google Captcha & Maps.",
     "BJTreklife": "Developed in NextJS, Redux, SASS for the front-end and NodeJS, Express, MongoDB for the back-end. UI/UX design and conception done by myself. The site is responsive and has been optimized for SEO. The back-end is secured with JWT tokens. The site is hosted on Vercel and the database on MongoDB Atlas.",
-    "ArgentBank": "Developed in React with Vite, integrating Redux, SASS and Axios for the front-end. Based on a provided design, I did the integration and set up the authentication with JWT. Also, I implemented a state management system with Redux and contributed to the definition of the Transactions routes of the API."
+    "ArgentBank": "Developed in React with Vite, integrating Redux, SASS and Axios for the front-end. Based on a provided design, I did the integration and set up the authentication with JWT. Also, I implemented a state management system with Redux and contributed to the definition of the Transactions routes of the API.",
+    "Portfolio": "Developed in React with Vite, integrating i18next and SASS. UI/UX design and conception done by myself.",
+    "ArticleSheets": {
+      "Title": "Article Sheets for Chez Valérie",
+      "Description": "Developed a React interface for article submissions with AG Grid for dynamic interactions. Backend uses Node.js and Express.js, integrated with SheetJS for Excel exports. Features file uploads via Multer and email sending with mailtrap.io."
+    }
   },
   "Skills": {
     "Title": "Skills",

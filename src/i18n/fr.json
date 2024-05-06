@@ -57,7 +57,12 @@
     "Title": "Projets",
     "ChezValerie": "Développé en HTML, SASS, JS Vanilla et PHP. Design pensé pour offrir une expérience UI/UX optimale. La performance a été une priorité, ainsi que l'accessibilité. Le formulaire, codé en PHP, protège contre les attaques XSS, CSRF ainsi que d'autres mesures de sécurité. Intégration de Google Captcha & Maps.",
     "BJTreklife": "Développé en NextJS, Redux, SASS pour le front-end et NodeJS, Express, MongoDB pour le back-end. Design et conception UI/UX réalisé par mes soins. Le site est responsive et a été optimisé pour le SEO. Le back-end est sécurisé avec des tokens JWT. Le site est hébergé sur Vercel et la base de données sur MongoDB Atlas.",
-    "ArgentBank": "Développé en React avec Vite, intégrant Redux, SASS et Axios pour le front-end. Basé sur un design fourni, j'ai réalisé l'intégration et la mise en place de l'authentification avec JWT. Egalement, j'ai mis en place un système de gestion d'état avec Redux et participé à la définition des routes Transactions de l'API."
+    "ArgentBank": "Développé en React avec Vite, intégrant Redux, SASS et Axios pour le front-end. Basé sur un design fourni, j'ai réalisé l'intégration et la mise en place de l'authentification avec JWT. Egalement, j'ai mis en place un système de gestion d'état avec Redux et participé à la définition des routes Transactions de l'API.",
+    "Portfolio": "Développé en React avec Vite, intégrant i18next et SASS. Conception et design UI/UX réalisés par moi-même.",
+    "ArticleSheets": {
+      "Title": "Fiches d'articles pour Chez Valérie",
+      "Description": "Développement d'une interface React pour les soumissions de fiches articles avec AG Grid. Le backend utilise Node.js et Express.js, intégrés à SheetJS pour les exportations Excel. Comprend le téléchargement de fichiers via Multer et l'envoi d'e-mails avec mailtrap.io."
+    }
   },
   "Skills": {
     "Title": "Compétences",
