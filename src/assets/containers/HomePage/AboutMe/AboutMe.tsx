@@ -6,12 +6,15 @@ import Nationalite from "../../../images/nationalite.png";
 import Competences from "../../../images/competence.png";
 import PasseTemps from "../../../images/passeTemps.png";
 import { useTranslation } from "react-i18next";
-import React from "react";
 
 function AboutMe() {
   const { t } = useTranslation();
 
-  const aboutMeData : {title: string; imageIcon: string; description: string}[] = [
+  const aboutMeData: {
+    title: string;
+    imageIcon: string;
+    description: string;
+  }[] = [
     {
       title: t("AboutMe.Nationalite"),
       imageIcon: Nationalite,

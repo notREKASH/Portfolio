@@ -1,4 +1,3 @@
-import React from "react";
 import "./hamburger-menu.scss";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
@@ -29,7 +28,7 @@ function HamburgerMenu() {
     },
   ];
 
-  const [menuOpen, setMenuOpen] = useState<boolean>(false)
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   useEffect(() => {
     if (menuOpen) {
@@ -50,8 +49,7 @@ function HamburgerMenu() {
   return (
     <>
       <div
-        className={`hamburgerMenuContainer ${menuOpen ? "active" : ""}`}
-      ></div>
+        className={`hamburgerMenuContainer ${menuOpen ? "active" : ""}`}></div>
       <div className={`navigation ${menuOpen ? "active" : "inactive"}`}>
         <ul>
           {hamburgerMenu.map((nav, index) => {
@@ -60,8 +58,7 @@ function HamburgerMenu() {
                 <a
                   href={nav.link}
                   onClick={toggleMenu}
-                  className="hamburger-link"
-                >
+                  className="hamburger-link">
                   {nav.name}
                 </a>
               </li>
@@ -71,8 +68,7 @@ function HamburgerMenu() {
       </div>
       <div
         className={`hamburgerMenu ${menuOpen ? "active" : ""}`}
-        onClick={toggleMenu}
-      >
+        onClick={toggleMenu}>
         <span className="hamburgerMenu--span"></span>
         <span className="hamburgerMenu--span"></span>
         <span className="hamburgerMenu--span"></span>

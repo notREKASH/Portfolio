@@ -6,7 +6,6 @@ import User from "../../../images/user.png";
 import Phone from "../../../images/phone.png";
 import Email from "../../../images/email.png";
 import { useTranslation } from "react-i18next";
-import React from "react";
 
 const emailjsService = import.meta.env.VITE_EMAILJS_SERVICE;
 const emailjsTemplate = import.meta.env.VITE_EMAILJS_TEMPLATE;
@@ -14,13 +13,15 @@ const emailjsKey = import.meta.env.VITE_EMAILJS_KEY;
 
 function Form() {
   const { t } = useTranslation();
-  const [toast, setToast] = useState<{message: string; type: string}>({ message: "", type: "" });
+  const [toast, setToast] = useState<{ message: string; type: string }>({
+    message: "",
+    type: "",
+  });
 
   const form = useRef<HTMLFormElement>(null);
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-
       if (!emailjsService || !emailjsTemplate || !emailjsKey) {
         throw new Error("La configuration de l'envoi de mail est manquante");
       } else if (!form.current) {
@@ -53,8 +54,7 @@ function Form() {
         <form
           className="form__content__container"
           ref={form}
-          onSubmit={sendEmail}
-        >
+          onSubmit={sendEmail}>
           <div className="form__content__container__input">
             <label htmlFor="name"></label>
             <input
@@ -83,8 +83,7 @@ function Form() {
               cols={30}
               rows={10}
               placeholder={t("Form.Message")}
-              required
-            ></textarea>
+              required></textarea>
           </div>
           <input
             className="form__content__container__button"
@@ -103,7 +102,9 @@ function Form() {
           </div>
           <div>
             <img src={Email} alt="icon mail" />
-            <a href="mailto:benmehal.joris@gmail.com">benmehal.joris@gmail.com</a>
+            <a href="mailto:benmehal.joris@gmail.com">
+              benmehal.joris@gmail.com
+            </a>
           </div>
         </div>
       </div>

@@ -1,9 +1,8 @@
 import "./card-projet.scss";
-import GithubImage from "../../../assets/images/github.png";
-import LiveImage from "../../../assets/images/live.png";
+import GithubImage from "../../images/github.png";
+import LiveImage from "../../images/live.png";
 import FilterButton from "./FilterButton/FilterButton";
 import { useTranslation } from "react-i18next";
-import React from "react";
 
 interface CardProjectProps {
   title: string;

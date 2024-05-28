@@ -1,7 +1,6 @@
 import "./download-cv.scss";
 import DownloadIco from "../../images/telecharger.png";
 import { useTranslation } from "react-i18next";
-import React from "react";
 
 function DownloadCV() {
   const { t } = useTranslation();

@@ -1,12 +1,11 @@
 import { useEffect, useRef } from "react";
 import "./MatrixRain.scss";
-import React from "react";
 
 function MatrixRain() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const canvas : HTMLCanvasElement | null = canvasRef.current;
+    const canvas: HTMLCanvasElement | null = canvasRef.current;
 
     if (!canvas) {
       return;
@@ -14,7 +13,8 @@ function MatrixRain() {
 
     const ctx: CanvasRenderingContext2D | null = canvas.getContext("2d");
     const width: number = (canvas.width = window.innerWidth);
-    const height: number = (canvas.height = document.documentElement.scrollHeight);
+    const height: number = (canvas.height =
+      document.documentElement.scrollHeight);
     const letters: string =
       "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ";
     const fontSize: number = 10;
@@ -25,7 +25,6 @@ function MatrixRain() {
     }
 
     function draw() {
-
       if (!ctx) {
         return;
       }
@@ -34,7 +33,8 @@ function MatrixRain() {
       ctx.fillRect(0, 0, width, height);
 
       for (let i = 0; i < drops.length; i++) {
-        const text: string = letters[Math.floor(Math.random() * letters.length)];
+        const text: string =
+          letters[Math.floor(Math.random() * letters.length)];
         ctx.fillStyle = "#82dff6";
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
         drops[i]++;

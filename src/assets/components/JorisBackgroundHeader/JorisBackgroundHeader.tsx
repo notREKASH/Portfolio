@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import "./joris-background-header.scss";
 import Logo from "../../images/joris-bg.png";
-import React from "react";
 
 function JorisBackgroundHeader() {
-  const [shadow, setShadow] = useState<{x: number; y: number}>({ x: 0, y: 0 });
+  const [shadow, setShadow] = useState<{ x: number; y: number }>({
+    x: 0,
+    y: 0,
+  });
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {

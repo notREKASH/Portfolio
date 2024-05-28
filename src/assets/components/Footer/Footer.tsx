@@ -3,7 +3,6 @@ import "./footer.scss";
 import Github from "../../images/github.png";
 import Linkedin from "../../images/linkedin.png";
 import { useTranslation } from "react-i18next";
-import React from "react";
 
 const footerLinks = [
   { name: "Github", link: "https://github.com/notREKASH", icon: Github },

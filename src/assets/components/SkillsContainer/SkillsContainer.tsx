@@ -1,7 +1,5 @@
 import "./skills-container.scss";
 import SkillsCard from "../SkillsCard/SkillsCard";
-import React from "react";
-
 
 interface SkillsContainerProps {
   skills: {
